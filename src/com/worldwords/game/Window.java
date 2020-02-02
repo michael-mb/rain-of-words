@@ -150,7 +150,7 @@ public class Window extends JFrame{
 				JOptionPane jop = new JOptionPane();
 		          ImageIcon img = new ImageIcon("fichier/mario.jpg");        
 		          String mess = "Thanks ! \n I hope you have fun !";
-		          mess += "\n You just have to enter the word that appears on the screen. Then type enter to confirm. If the word disappears, you have gained one point. !";        
+		          mess += "\n You just have to enter the word that appears on the screen. Then type enter to confirm. If the word disappears, you have gained one point !";        
 		          jop.showMessageDialog(null, mess, "How to play ? ", JOptionPane.INFORMATION_MESSAGE, img); 
 				
 			}
