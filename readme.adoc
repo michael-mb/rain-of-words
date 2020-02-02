@@ -7,4 +7,4 @@ This Snake game was developed in Java with the IDE Eclipce.
 * In the IDE: find `Main.java`, right-click project, select "Run As > Java Application"
 * From the command line: run `java -jar rain-of-words.jar`
 
-image:rain.png[DEMO]
+image:rain-image.png[DEMO]
