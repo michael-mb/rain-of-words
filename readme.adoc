@@ -1,10 +1,10 @@
-= Snake
+= rain of words 
 
 This Snake game was developed in Java with the IDE Eclipce.
 
 == How to run the application?
 
 * In the IDE: find `Main.java`, right-click project, select "Run As > Java Application"
-* From the command line: run `java -jar snake.jar`
+* From the command line: run `java -jar rain-of-words.jar`
 
-image:snake_demo.png[DEMO]
+image:rain.png[DEMO]
