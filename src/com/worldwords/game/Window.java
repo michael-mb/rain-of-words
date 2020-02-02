@@ -6,10 +6,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.KeyStroke;
 
@@ -23,6 +25,9 @@ public class Window extends JFrame{
 		private JMenuItem mQuit ;
 		
 		private JMenu mLevel ;
+		
+		private JMenu mInfo ; 
+		private JMenuItem info;
 		
 		private ButtonGroup levelGroup;
 		private JRadioButtonMenuItem mEasy ;
@@ -53,6 +58,9 @@ public class Window extends JFrame{
 		mQuit = new JMenuItem("Quit");
 		mLevel = new JMenu("Level");
 		
+		mInfo = new JMenu("infos");
+		info = new JMenuItem("?");
+		
 		levelGroup = new ButtonGroup();
 		mEasy = new JRadioButtonMenuItem("Easy");
 		mNormal = new JRadioButtonMenuItem("Normal");
@@ -69,6 +77,8 @@ public class Window extends JFrame{
 		
 		mFile.add(mReplay);
 		mFile.add(mQuit);
+
+		mInfo.add(info);
 		
 		mLevel.add(mEasy);
 		mEasy.setSelected(true);
@@ -77,7 +87,7 @@ public class Window extends JFrame{
 		
 		menuBar.add(mFile);
 		menuBar.add(mLevel);
-		
+		menuBar.add(mInfo);
 		this.setJMenuBar(menuBar);
 	}
 	
@@ -131,6 +141,19 @@ public class Window extends JFrame{
 				level = 3 ;
 			}
 			
+		});
+		
+		info.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane jop = new JOptionPane();
+		          ImageIcon img = new ImageIcon("fichier/mario.jpg");        
+		          String mess = "Thanks ! \n I hope you have fun !";
+		          mess += "\n You just have to enter the word that appears on the screen. Then type enter to confirm. If the word disappears, you have gained one point. !";        
+		          jop.showMessageDialog(null, mess, "How to play ? ", JOptionPane.INFORMATION_MESSAGE, img); 
+				
+			}
 		});
 	}
 	
